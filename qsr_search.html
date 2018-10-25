@@ -49,32 +49,40 @@
           getResults(searchInput.val());
         });
         
+        searchInput.keypress(function(e) {
+          var key = e.which;
+          if (key == 13) {
+            searchButton.click();
+            return false;
+          }
+        });
+        
         function getResults(query) {
-          console.log(query);
+          //console.log(query);
           pagesFound = [];
           resultsList.html("");
           
           var resultsIndex = index.search(query);
-          console.log(resultsIndex);
+          //console.log(resultsIndex);
           resultsIndex.forEach(function(result) {
             pagesFound.push(pages.filter(page => page.slug === result.ref)[0]);
           });
           
-          console.log(pagesFound);
+          //console.log(pagesFound);
           showResults();
         }
         
         function showResults() {
-          if (pagesFound) {
+          if (pagesFound && pagesFound.length > 0) {
             pagesFound.forEach(function(page) {
               var newResult = "<div class='row'><div class='col'>";
-              newResult += "<h3><a href='" + page.url + "'>" + page.title + "</a></h3>";
+              newResult += "<h4><a href='" + page.url + "'>" + page.title + "</a></h4>";
               newResult += "<p>" + page.body.substring(0, 100) + "...</p>";
               newResult += "</div></div>";
               resultsList.append(newResult);
             });
           } else {
-            resultsList.html("<p>No results found</p>");
+            resultsList.html("<div class='row'><div class='col'><h3>No results found</h3></div></div>");
           }
         }
       });
