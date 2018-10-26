@@ -25,6 +25,12 @@
       </div>
     </div>
     <script>
+      // Build search index and functionality from lunr.js
+      // Melvin Chien, University of Toronto
+      // October 26, 2018
+      // Lunr.js: https://lunrjs.com/docs/index.html
+      
+      // JSON object of list of pages and content from getPages.js
       var pages = [
         {
           "title": "Getting Started",
@@ -435,10 +441,11 @@
           "body": "Quizzical is an educational software designed to help students engage more deeply with course material It has two major facets  students are assigned one or more dates to create multiple choice questions and all the best questions as vetted by professorTA are available in a quiz pool allowing each student to take practice quizzes and prepare for exams  View and download this guide to get started with Quizzical as a student Quizzical Student Guidepdf"
         }
       ];
-          
+      
+      // Build lunr.js index
       var index = lunr(function() {
         this.ref("slug");
-        this.field("title", {boost: 3});
+        this.field("title", {boost: 3}); // Increase weight of title field matches by multiple of 3
         this.field("body");
         
         pages.forEach(function(page) {
@@ -452,10 +459,12 @@
         var resultsList = $("#results-list");
         var pagesFound = [];
         
+        // Perform search when Search button is clicked
         searchButton.click(function() {
           getResults(searchInput.val());
         });
         
+        // Also perform search when Enter key is pressed
         searchInput.keypress(function(e) {
           var key = e.which;
           if (key == 13) {
@@ -464,6 +473,7 @@
           }
         });
         
+        // Retrieve results from index
         function getResults(query) {
           //console.log(query);
           pagesFound = [];
@@ -472,6 +482,7 @@
           var resultsIndex = index.search(query);
           //console.log(resultsIndex);
           resultsIndex.forEach(function(result) {
+            // Find actual page object based on slug key
             pagesFound.push(pages.filter(page => page.slug === result.ref)[0]);
           });
           
@@ -479,6 +490,7 @@
           showResults();
         }
         
+        // Display results in a list
         function showResults() {
           if (pagesFound && pagesFound.length > 0) {
             pagesFound.forEach(function(page) {
