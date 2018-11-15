@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  <!--
+    // Build search index with lunr.js
+    // Tested on Firefox 56.0, Chrome 70.0, and Internet Explorer 11
+    // Made by Melvin Chien, Academic and Collaborative Technologies, University of Toronto
+    // Content from Quercus Support Resources, University of Toronto (https://q.utoronto.ca/courses/46670)
+    // November 14, 2018
+    // Lunr.js: https://lunrjs.com/docs/index.html
+  -->
   <head>
     <title>Quercus Support Resources Search</title>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
@@ -24,11 +31,6 @@
       </div>
     </div>
     <script>
-      // Build search index with lunr.js
-      // Melvin Chien, Academic and Collaborative Technologies, University of Toronto
-      // November 14, 2018
-      // Lunr.js: https://lunrjs.com/docs/index.html
-
       $(function() {
         var index;
         var searchInput = $("#input-search");
