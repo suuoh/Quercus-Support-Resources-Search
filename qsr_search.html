@@ -10,6 +10,14 @@
   -->
 
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129676263-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-129676263-1');
+    </script>
     <title>Quercus Support Resources Search</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.5/lunr.min.js"></script>
     <base target="_parent">
@@ -521,7 +529,9 @@
           //console.log(query);
           pagesFound = [];
           resultsList.innerHTML = "";
-
+          
+          gtag("event", "search", {"search_term": query});
+          
           try {
             var resultsIndex = index.search(query);
             //console.log(resultsIndex);
