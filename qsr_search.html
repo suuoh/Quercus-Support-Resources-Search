@@ -14,11 +14,15 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129676263-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag('js', new Date());
       gtag('config', 'UA-129676263-1');
+
     </script>
-    
+
     <title>Quercus Support Resources Search</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.5/lunr.min.js"></script>
     <base target="_parent">
@@ -32,8 +36,13 @@
         box-sizing: border-box;
         color: #212529;
       }
-      
-      h1, h2, h3, h4, h5, h6 {
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         font-family: inherit;
         margin-top: 0;
         margin-bottom: 0.5rem;
@@ -45,11 +54,11 @@
       h1 {
         font-size: 2.5rem;
       }
-      
+
       h2 {
         font-size: 2rem;
       }
-      
+
       h3 {
         font-size: 1.75rem;
       }
@@ -57,7 +66,7 @@
       h4 {
         font-size: 1.5rem;
       }
-      
+
       p {
         font-family: inherit;
         margin-top: 0;
@@ -73,7 +82,7 @@
         color: #0062cc;
         text-decoration: underline;
       }
-      
+
       .container {
         padding: 0.25rem;
         margin: auto;
@@ -130,23 +139,23 @@
         border-bottom-left-radius: 0;
         cursor: pointer;
       }
-      
+
       .btn:hover {
         color: #fff;
         background-color: #0069d9;
         border-color: #0062cc;
       }
-      
+
       #btn-search {
         margin-left: -1px;
         display: flex;
       }
-      
+
       #results-list {
         margin: 0.5rem;
         padding-top: 0.5rem;
       }
-      
+
     </style>
   </head>
 
@@ -167,8 +176,7 @@
         var searchButton = document.getElementById("button-search"); // Search button
         var resultsList = document.getElementById("results-list"); // Search results list
         var pagesFound = [];
-        var pages = [
-          {
+        var pages = [{
             "title": "Getting Started",
             "slug": "getting-started",
             "url": "https://q.utoronto.ca/courses/46670/pages/getting-started",
@@ -310,13 +318,13 @@
             "title": "EdTech Catalogue",
             "slug": "edtech-catalogue",
             "url": "https://q.utoronto.ca/courses/46670/pages/edtech-catalogue",
-            "body": "This is a current catalogue of educational technology tools and services supported at the University of Toronto either as a central resource or supported at the divisional or departmental level On This Page Preamble U of T Integrate Quercus Academic Toolbox Integrated Tools from AZ Institutionally Supported Tools Divisionally andor Departmentally Supported Tools Use of Social Media at U of T Preamble We realize that this could be a massive list since most professional educational technology staff and librarians are willing to help someone use something they may not have even seen before However in an attempt to keep things manageable this catalogue of educational technology services platforms tools etc consists of only those items that are currently supported here at UofT in some routine or official way The catalogue is organized on the basis of Laurie Harrisons excellent typology reference httpsteachingutorontocaedtechonlinelearningtoolkitbeyondquercus For resources that are not centrally supported the name of the division that is supporting or using the service is located in parenthesis if known U of T Integrate Submit your idea for a teaching tool resource or service that you think should be officially supported here at U of T we are always looking to add to the toolkit Idea submissions for new Quercus integrations will be queued and reviewed Submit an Idea Quercus Academic Toolbox Integrated Tools from AZ The integration of learning tools in the academic toolbox extends functionality and allows instructors to choose the tools that match their course goals and learning outcomes View the list of Integrated Tools that are available for use in Quercus courses Institutionally Supported Teaching and Learning Tools Assessment peerScholar Crowdmark ExamSoft Quercus Canvas Peer Review Assignment Assignment Submission peerScholar Quercus Assignment Authoring Tools Quercus Modules Tutorials Articulate Storyline Blogging WordPress Bubble Sheet Remark Office Citation Management RefWorks Classroom Response Systems iClicker Conference Management OCS Content Management Active WordPress Drupal DiscourseDiscussionDiscussion Board Listserv Quercus Discussions Document SharingManagement Quercus Office365 Sharepoint ExamQuiz WeBWork Quercus ExamQuiz SCORM Articulate Storyline Faculty Profiling Focus BlueBook High Performance Computing SciNet Image Hosting FADIS Interactive Module CreationEditing Quercus Journal Publishing OJS Lecture Capture TechSmith Snagit Object Repository TSpace Personal Journals WordPress Plagiarism Detection Turnitin before using Turnitin read the U of T Conditions of Use Portfolios WordPress Quercus Presentations MS PowerPoint Rubrics Quercus Surveys Online Quercus Surveys Paper Remark Office Video Hosting MyMedia Videoconferencing Collaborate Ultra Skype for Business Web Productiivity Apps MS LiveEdu WebinarWebconferencing Collaborate Ultra Skype for Business Wiki Quercus Page all kinds of GIS and related stuff from the map library Divisionally andor Departmentally Supported Tools Assignment Submission UTMSubmit U of T Mississauga Audience Response Turning Medicine Audience Response TopHat Engineering DiscourseDiscussion PeppeR OISE DiscourseDiscussion InteraNet U of T Scarborough Document Sharing FileTransfer U of T Scarborough English language Development Vocabulary Expansion Accelerator UTSC Faculty Profiling StarCV Medicine OISE Interactive Module CreationEditing Captivate Medicine Lecture Capture WebOption U of T Scarborough Lecture Capture Echo360 Appliance Engineering Dentistry Lecture Capture Panopto iSchool Plagiarism Detection UTMSubmit U of T Mississauga Surveys Fluid Surveys NursingMedicine Video Collaboration Vidyo OISE Videoconferencing Tanberg Medicine Videoconferencing Hardware Codecs many divisions Videoconferencing Skype for Business WebinarWebconferencing Connect Medicine Rehabilitation Sciences Sector U of T Mississauga OISE School of Graduate Studies GIS stuff U of T Mississauga Geography Web 20 and Cloudbased Technologies not under contract to someone at the University but generally supported by some divisions at U of T for more information about the appropriate use of Cloud technologies please see Tools Beyond Quercus Use of Social Media at U of T It is very important to remember that unless you have a formal contract with a 3rd party company that protects the personal information and intellectual property of you and your students you should not force your students to use that service Please read a companys Terms of Service materials very carefully they often contain clauses that run counter to the Universitys guidelines Assessment Crowdmark Math Department Assessment Pearson MyLabs Mastering assorted departments Assessment Management ExamSoft Audience Response Twitter Engineering Blogging Twitter Edublogs Blogger Citation Management Zotero Wizfolio EndNote Sente Mendeley U of T Libraries DiscourseDiscussion CoursePeer EngineeringRotman Document SharingManagement Dropbox EverNote Google Docs Image Hosting Flickr Creative Commons Search U of T Libraries Online Proctoring Services ProctorU RotmanNursing Online Proctoring Services BVirtual SCSNursing Presentations Prezi U of T Libraries Screen Capture Jing Screenr VideoConferencing G Hangouts Virtual pinboard Pinterest Web Productivity Apps Google Docs Wiki PBWiki MediaWiki MOOCs The University has an agreement with Coursera and EdX for the delivery of MOOCs and in turn those environments can be used in conjunction with UofT credit courses in some cases Please see the Open U Toronto for more details"
+            "body": "This is a current catalogue of educational technology tools and services supported at the University of Toronto either as a central resource or supported at the divisional or departmental level On This Page Preamble U of T Integrate Quercus Academic Toolbox Integrated Tools from AZ Institutionally Supported Tools Divisionally andor Departmentally Supported Tools Use of Social Media at U of T Preamble We realize that this could be a massive list since most professional educational technology staff and librarians are willing to help someone use something they may not have even seen before However in an attempt to keep things manageable this catalogue of educational technology services platforms tools etc consists of only those items that are currently supported here at UofT in some routine or official way The catalogue is organized on the basis of Laurie Harrisons excellent typology reference httpsteachingutorontocaedtechonlinelearningtoolkitbeyondquercus For resources that are not centrally supported the name of the division that is supporting or using the service is located in parenthesis if known U of T Integrate Submit your idea for a teaching tool resource or service that you think should be officially supported here at U of T we are always looking to add to the toolkit Idea submissions for new Quercus integrations will be queued and reviewed Submit an Idea Quercus Academic Toolbox Integrated Tools from AZ The integration of learning tools in the academic toolbox extends functionality and allows instructors to choose the tools that match their course goals and learning outcomes View the list of Integrated Tools that are available for use in Quercus courses Institutionally Supported Teaching and Learning Tools Assessment peerScholar Crowdmark ExamSoft Quercus Canvas Peer Review Assignment Assignment Submission peerScholar Quercus Assignment Authoring Tools Quercus Modules Tutorials Articulate Storyline Blogging WordPress Bubble Sheet Remark Office Citation Management RefWorks Classroom Response Systems iClicker Top Hat Conference Management OCS Content Management Active WordPress Drupal DiscourseDiscussionDiscussion Board Listserv Quercus Discussions Document SharingManagement Quercus Office365 Sharepoint ExamQuiz WeBWork Quercus ExamQuiz SCORM Articulate Storyline Faculty Profiling Focus BlueBook High Performance Computing SciNet Image Hosting FADIS Interactive Module CreationEditing Quercus Journal Publishing OJS Lecture Capture TechSmith Snagit Object Repository TSpace Personal Journals WordPress Plagiarism Detection Turnitin before using Turnitin read the U of T Conditions of Use Portfolios WordPress Quercus Presentations MS PowerPoint Rubrics Quercus Surveys Online Quercus Surveys Paper Remark Office Video Hosting MyMedia Videoconferencing Collaborate Ultra Skype for Business Web Productiivity Apps MS LiveEdu WebinarWebconferencing Collaborate Ultra Skype for Business Wiki Quercus Page all kinds of GIS and related stuff from the map library Divisionally andor Departmentally Supported Tools Assignment Submission UTMSubmit U of T Mississauga Audience Response Turning Medicine Classroom Response Systems TopHat Engineering DiscourseDiscussion PeppeR OISE DiscourseDiscussion InteraNet U of T Scarborough Document Sharing FileTransfer U of T Scarborough English language Development Vocabulary Expansion Accelerator UTSC Faculty Profiling StarCV Medicine OISE Interactive Module CreationEditing Captivate Medicine Lecture Capture WebOption U of T Scarborough Lecture Capture Echo360 Appliance Engineering Dentistry Lecture Capture Panopto iSchool Plagiarism Detection UTMSubmit U of T Mississauga Surveys Fluid Surveys NursingMedicine Video Collaboration Vidyo OISE Videoconferencing Tanberg Medicine Videoconferencing Hardware Codecs many divisions Videoconferencing Skype for Business WebinarWebconferencing Connect Medicine Rehabilitation Sciences Sector U of T Mississauga OISE School of Graduate Studies GIS stuff U of T Mississauga Geography Web 20 and Cloudbased Technologies not under contract to someone at the University but generally supported by some divisions at U of T for more information about the appropriate use of Cloud technologies please see Tools Beyond Quercus Use of Social Media at U of T It is very important to remember that unless you have a formal contract with a 3rd party company that protects the personal information and intellectual property of you and your students you should not force your students to use that service Please read a companys Terms of Service materials very carefully they often contain clauses that run counter to the Universitys guidelines Assessment Crowdmark Math Department Assessment Pearson MyLabs Mastering assorted departments Assessment Management ExamSoft Audience Response Twitter Engineering Blogging Twitter Edublogs Blogger Citation Management Zotero Wizfolio EndNote Sente Mendeley U of T Libraries DiscourseDiscussion CoursePeer EngineeringRotman Document SharingManagement Dropbox EverNote Google Docs Image Hosting Flickr Creative Commons Search U of T Libraries Online Proctoring Services ProctorU RotmanNursing Online Proctoring Services BVirtual SCSNursing Presentations Prezi U of T Libraries Screen Capture Jing Screenr VideoConferencing G Hangouts Virtual pinboard Pinterest Web Productivity Apps Google Docs Wiki PBWiki MediaWiki MOOCs The University has an agreement with Coursera and EdX for the delivery of MOOCs and in turn those environments can be used in conjunction with UofT credit courses in some cases Please see the Open U Toronto for more details"
           },
           {
             "title": "The Basics",
             "slug": "the-basics",
             "url": "https://q.utoronto.ca/courses/46670/pages/the-basics",
-            "body": "On This Page U of T Quercus Integrated Tools to Facilitate Teaching and Learning Course Access Sandbox Course for Instructors Instructor Resources Additional Resources U of T Quercus Integrated Tools to Facilitate Teaching and Learning Quercus the University of Torontos new academic technology toolbox offers an advanced content design a variety of student communication tools easytouse course administration features and a mobile application for access to key functions from a phone or tablet Through a number of builtin tools and effective integration of other educational technologies this powerful app store platform allows for greater pedagogical flexibility and engagement Quercus common functions include Effective Engagement and Collaboration conduct discussions facilitate webinars organize assignment groups Assessment of and for Learning apply assessment tools like quizzes surveys assignment submissions Intuitive Communication send emails and announcements track progress manage course components through the calendar Teach Anywhere use the mobile app available on Android and iPhoneiPad The use of Quercus is governed by various University policies and guidelines Course Access Login to Quercus with Your UTORid and Password at qutorontoca Weblogin Activate Your UTORid To access Quercus you need a UTORid Your UTORid includes a username and password that is unique to you This is used as authentication for many University of Toronto services including access to your Qercus courses Your Business Officer or in some faculties and departments your Human Resources Officer can issue you your UTORid and Secret Activation Key To activate your UTORid go to httpswwwutoridutorontocacgibinutoridactivatepl Visiting and Status Only Instructors If you are teaching in one of these positions and do not appear in HRIS ask the Business Officer or ROSI Coordinator in your department to apply for a LongTerm Guest UTORid on your behalf UTORid and Password Issues If you are experiencing issues with your UTORid and password please contact the Information Commons Help Desk Accessing Your Courses Once you are signed into Quercus you should be able to see a list of your courses in your Dashboard If you are unable to see your course this may be due to one of the following Contact your department or ROSI Coordinator and verify that the course has been created in ROSI and that you have been assigned as the instructor for the course in ROSI Instructor and student enrollment is directly uploaded from ROSI to Quercus Verify with your Business Officer or divisional Human Resources Officer that your employment record has been activated in HRIS If you are a faculty or staff of Federated Colleges please contact your divisional Quercus administrator All courses on Quercus follow the Course Life Cycle Please review the timeline to confirm whether you should have access to your course NOTE Any changes made in ROSI or HRIS will be reflected in Quercus within 2448 hours I want to change my name as it appears in Quercus Change to Preferred First Name you should log in to MyAuth httpsmyauthutorontoca Sandbox Course for Instructors As part of Instructor training and Content Migration a Quercus sandbox course was automatically created for all instructors to try out the tools features in the course site and begin building a fully developed course Sandbox courses are unofficial nonROSI courses that do not have student enrollments These courses are a space created for an individual instructor to experiment with a Quercus course site Instructor Resources Instructor Quercus Checklist Course Life Cycle Course Roles and Permissions Navigating Your Course Notification Preferences User Account and Profile Calendar Overview Additional Resources U of T Support and Resources Where can I find a list of Canvas terminology"
+            "body": "On This Page U of T Quercus Integrated Tools to Facilitate Teaching and Learning Course Login and Access Change My Name as it Appears in Quercus Instructor Resources Course Sandbox Additional Resources U of T Quercus Integrated Tools to Facilitate Teaching and Learning Quercus the University of Torontos new academic technology toolbox offers advanced content design a variety of student communication tools easytouse course administration features and a mobile application for access to key functions from a phone or tablet Through a number of builtin tools and effective integration of other educational technologies this powerful app store platform allows for greater pedagogical flexibility and engagement Quercus common functions include Effective Engagement and Collaboration conduct discussions facilitate webinars organize assignment groups Assessment of and for Learning apply assessment tools like quizzes surveys assignment submissions Intuitive Communication send emails and announcements track progress manage course components through the calendar Teach Anywhere use the mobile app available on Android and iPhoneiPad The use of Quercus is governed by various University policies and guidelines Course Login and Access Login to Quercus with Your UTORid and Password at qutorontoca Activate Your UTORid Your UTORid includes a username and password that is unique to you This is used as authentication for many University of Toronto services including access to your Quercus Courses Your Business Officer or in some faculties and departments your Human Resources Officer can issue you your UTORid and Secret Activation Key To activate your UTORid go to httpswwwutoridutorontocacgibinutoridactivatepl Steps You Can Take To Protect Your Account Quick visual user guides to assist you in keeping your account secure Help Troubleshooting Additional resources to help you protect and manage your account Visiting and Status Only Instructors If you are teaching as a Visiting or Status Only Instructor and do not appear in HRIS ask the Business Officer or ROSI Coordinator in your department to apply for a LongTerm Guest UTORid on your behalf UTORid and Password Issues If you are experiencing issues with your UTORid and password please contact the Information Commons Help Desk Accessing Your Courses Once you are signed into Quercus you should be able to see a list of your courses in your Dashboard If you are unable to see your course this may be due to one of the following Contact your department or ROSI Coordinator and verify that the course has been created in ROSI and that you have been assigned as the instructor for the course in ROSI Instructor and student enrollment is directly uploaded from ROSI to Quercus Verify with your Business Officer or divisional Human Resources Officer that your employment record has been activated in HRIS If you are a faculty or staff of Federated Colleges please contact your divisional Quercus administrator All courses on Quercus follow the Course Life Cycle Please review the timeline to confirm whether you should have access to your course NOTE Any changes made in ROSI or HRIS will be reflected in Quercus within 2448 hours Change my name as it appears in Quercus Instructors can login to myauthutorontoca to update their preferred display names It will take 24 48 hours for the changes to update in Quercus Instructor Resources Sandbox Course As part of Instructor training and Content Migration a Quercus sandbox course was automatically created for all instructors to try out the tools features in the course site and begin building a fully developed course Sandbox courses are unofficial nonROSI courses that do not have student enrollments These courses are a space created for an individual instructor to experiment with a Quercus course site Additional Resources Instructor Quercus Checklist Course Life Cycle Course Roles and Permissions Navigating Your Course Notification Preferences User Account and Profile Calendar Overview U of T Support and Resources Where can I find a list of Canvas terminology"
           },
           {
             "title": "Support",
@@ -497,6 +505,12 @@
             "slug": "learning-outcomes",
             "url": "https://q.utoronto.ca/courses/46670/pages/learning-outcomes",
             "body": "This page is also available as an accessible PDF document On This Page Overview Writing Effective Learning Outcomes Quercus Outcomes Tool Adding Outcomes Creating Outcomes Adding Criterion Ratings Setting Mastery Level and Calculation Method Adding Outcomes to A Rubric Viewing Student Outcomes Overview The Outcomes tool allows instructors to input learning outcomes directly in their Quercus course and map these outcomes to course assessments in order to track student achievement Writing Effective Learning Outcomes Aligning assessment with intended course learning outcomes is crucial for student success Each learning outcome should describe an observable piece of knowledge or a skill that students should demonstrate following the completion of an assessment or course unit The guide Developing Learning Outcomes is available on the CTSI webpage to support the development of effective learning outcomes for your courses Quercus Outcomes Tool Add your course learning outcomes as Outcomes on Quercus so that they can be included in rubrics when grading student assignments discussions or quizzes This provides an easy way to assess student achievement of the course learning outcomes Adding Outcomes 1 In Course Navigation click the Outcomes link 2 To create a new Outcome click Outcome Creating Outcomes 1 Enter a name for the outcome in the Name this Outcome This is the official name that will appear in the Learning Mastery Gradebook 2 You can also add a Friendly Name that students will see when viewing their grades in the Learning Mastery Gradebook 3 Add a description of the outcome using the rich content editor Adding Criterion Ratings Add criterion ratings that specify various levels of performance for the outcome 1 Click the Edit or pencil icon in the criterion rating You can change the name and point value if desired 2 Click the OK button to save your changes 3 To remove the criterion click Delete To add additional criterion ratings click the Insert Setting Mastery Level and Calculation Method 1 Set the point value necessary to master the Learning Outcome in the Mastery At field 2 Select how you would like mastery to be calculated in the Calculation Method field 3 There are four calculation methods for student mastery a Decaying Average the average of all assessment items while weighing the most recent item at a higher percentage b n Number of Times a specific number of times that mastery must be met or exceeded in assessments for students to indicate overall mastery in the outcome c Most Recent Score the score for the most recent assessment item d Highest Score the highest score for all assessment items 4 Click the Save button to create the Outcome Adding Outcomes to a Rubric Once youve created outcomes align them with assignments discussions or quizzes within your course using Rubrics 1 When creating or editing a Rubric use the Find Outcomes link to add one or more outcomes and their criteria to your rubric 2 From the outcomes listed select one or more Outcomes to add to your rubric by clicking on outcome name Next click Import 3 If you want the outcome criterion to be part of the total point value of the assignment make sure the Use the Criterion for Scoring checkbox is marked The rubric should now be ready to use when you are grading the student assignment 4 To view aligned items rubrics or assignments and artifacts student assignments discussions or quizzes that are linked with specific outcomes open Outcomes in Course Navigation Click on the name of the outcome that for which you want to view aligned items 5 To see how a student is doing across all outcomes as well as individual artifacts view the students Outcome reports using the People tool on the Course Navigation If you to see how your class is doing as a whole you may want to view your outcomes via the Learning Mastery Gradebook NOTE University of Toronto is not currently using administrative account level outcomes in Quercus Viewing Student Outcomes Once outcomes have been added to Rubrics and used to assess student performance in assignments discussions and quizzes a summary of student achievement in the outcomes can then be viewed by enabling the Learning Mastery Gradebook a new Feature Option within Quercus To turn on the Learning Mastery Gradebook go to Settings from the Course Navigation menu and click on the Feature Options tab From there you can activate that Learning Mastery Gradebook It shows student learning achievement for every student by every Outcome in the course allowing you to monitor both how the class as a whole and individual students are performing How do I use the Learning Mastery Gradebook to view outcome results in a course Links to an external siteLinks to an external site How do I view outcomes or student results individually in the Learning Mastery Gradebook Links to an external siteLinks to an external site You can also view the outcomes results reports for individual students The Student Learning Mastery Gradebook shows students how they are being scored against the outcomes"
+          },
+          {
+            "title": "Top Hat",
+            "slug": "top-hat",
+            "url": "https://q.utoronto.ca/courses/46670/pages/top-hat",
+            "body": "The University of Toronto has partnered with Top Hat a classroom response system and etextbook delivery systemAt this time instructors can choose to use this technology and students can access Top Hat directly online from their website httpstophatcom If the instructor elects to use Top Hat students will need to buy an access code from their campus bookstore infouoftbookstorecom Later in 2019 access to Top Hat will be available via Quercus Support Questions should be sent directly to Top HatPablo Jarapablojaratophatcom 6479661948 Book time with Pablo directlyhttpsmeetmesotophatpablo Instructors should let their local divisional Educational Technology Support team know of their intentions to use Top Hat eTextbook Adoption For instructors please contact U of T Bookstore for your adoptions to ensure that the materials will be available for the students Here is a link to the bookstore website page showing contacts for the adoptions Adoption Information for Faculty includes contact information for all three campuses Teaching with Classroom Response Systems Bestpractice information for teaching with classroom response systems is available on the CTSI website"
           }
         ];
 
@@ -505,14 +519,16 @@
           index = lunr(function() {
             this.ref("slug");
             this.field("title", {
-              boost: 3 // Increase weight of title field matches by multiple of 3
-            });
+              boost: 3
+            }); // Increase weight of title field matches by multiple of 3
             this.field("body");
 
             pages.forEach(function(page) {
               this.add(page);
             }, this);
           });
+
+
 
           // Perform search when Search button is clicked
           searchButton.addEventListener("click", function() {
@@ -534,10 +550,12 @@
           //console.log(query);
           pagesFound = [];
           resultsList.innerHTML = "";
-          
+
           // Track search query in Google Analytics
-          gtag("event", "search", {"search_term": query});
-          
+          gtag("event", "search", {
+            "search_term": query
+          });
+
           try {
             var resultsIndex = index.search(query);
             //console.log(resultsIndex);
@@ -551,6 +569,7 @@
             showResults();
           }
 
+          //console.log(pagesFound);
           showResults();
         }
 
