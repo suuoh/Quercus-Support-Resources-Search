@@ -14,7 +14,6 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129676263-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-
       function gtag() {
         dataLayer.push(arguments);
       }
@@ -176,7 +175,8 @@
         var searchButton = document.getElementById("button-search"); // Search button
         var resultsList = document.getElementById("results-list"); // Search results list
         var pagesFound = [];
-        var pages = [{
+        var pages = [
+          {
             "title": "Getting Started",
             "slug": "getting-started",
             "url": "https://q.utoronto.ca/courses/46670/pages/getting-started",
@@ -518,17 +518,16 @@
         function buildIndex() {
           index = lunr(function() {
             this.ref("slug");
+            // Increase weight of title field matches by multiple of 3
             this.field("title", {
               boost: 3
-            }); // Increase weight of title field matches by multiple of 3
+            });
             this.field("body");
 
             pages.forEach(function(page) {
               this.add(page);
             }, this);
           });
-
-
 
           // Perform search when Search button is clicked
           searchButton.addEventListener("click", function() {
@@ -569,7 +568,6 @@
             showResults();
           }
 
-          //console.log(pagesFound);
           showResults();
         }
 
