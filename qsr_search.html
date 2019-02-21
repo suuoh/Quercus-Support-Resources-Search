@@ -5,7 +5,7 @@
     // Tested on Firefox 56.0, Chrome 70.0, and Internet Explorer 11
     // Made by Melvin Chien, Academic and Collaborative Technologies, University of Toronto
     // Content from Quercus Support Resources, University of Toronto (https://q.utoronto.ca/courses/46670)
-    // February 7, 2019
+    // February 21, 2019
     // Lunr.js: https://lunrjs.com/docs/index.html
   -->
 
@@ -581,9 +581,11 @@
           resultsList.innerHTML = "";
 
           // Track search query in Google Analytics
-          gtag("event", "search", {
-            "search_term": query
+          gtag("config", "UA-129676263-1", {
+            "page_title": "Search Results",
+            "page_path": "/search-results?q=" + query
           });
+          
 
           try {
             var resultsIndex = index.search(query);
