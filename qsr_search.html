@@ -144,6 +144,19 @@
         background-color: #0069d9;
         border-color: #0062cc;
       }
+      
+      .checkbox-input {
+        vertical-align: middle;
+        padding: 0;
+      }
+      
+      .checkbox-label {
+        font-size: .85rem;
+      }
+      
+      .checkbox-label::before {
+        background-color: #fff;
+      }
 
       #btn-search {
         margin-left: -1px;
@@ -164,16 +177,19 @@
         <input type="text" class="form-control" id="input-search" autofocus="autofocus" placeholder="What are you looking for? (Eg. course access, course life cycle, cross-listing, etc.)" aria-label="Search term" aria-describedby="button-search">
         <button class="btn btn-primary" type="button" id="button-search">Search</button>
       </div>
+      <input type="checkbox" class="checkbox-input" id="students-only">
+      <label class="checkbox-label" for="students-only">Show student results only</label>
       <div id="results-list">
       </div>
     </div>
     <script>
       // Wait for document to be loaded
       document.addEventListener("DOMContentLoaded", function(event) {
-        var index;
-        var searchInput = document.getElementById("input-search"); // Search text input
+        
+        var searchInput = document.getElementById("input-search"); // Text input for search
         var searchButton = document.getElementById("button-search"); // Search button
-        var resultsList = document.getElementById("results-list"); // Search results list
+        var checkboxStudents = document.getElementById("students-only"); // Checkbox for student resultss only
+        var resultsList = document.getElementById("results-list"); // Results list
         var pagesFound = [];
         var pages = [
           {
@@ -562,6 +578,7 @@
           // Perform search when Search button is clicked
           searchButton.addEventListener("click", function() {
             getResults(searchInput.value);
+            console.log(searchInput.value);
           });
 
           // Also perform search when Enter key is pressed
@@ -587,8 +604,13 @@
           });
           
           try {
-            var resultsIndex = index.search(query);
-            //console.log(resultsIndex);
+            var keywords = query;
+            
+            if (checkboxStudents.checked) {
+              keywords = "+title:student +" + query;
+            }
+            
+            var resultsIndex = index.search(keywords);
             resultsIndex.forEach(function(result) {
               // Find actual page object based on slug key
               pagesFound.push(pages.filter(function(page) {
