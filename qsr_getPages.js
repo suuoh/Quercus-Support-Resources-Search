@@ -3,7 +3,7 @@
 // Tested on Firefox 56.0 and Chrome 70.0
 // Made by Melvin Chien, Academic and Collaborative Technologies, University of Toronto
 // Content from Quercus Support Resources, University of Toronto (https://q.utoronto.ca/courses/46670)
-// December 20, 2018
+// February 22, 2019
 // Canvas API: https://canvas.instructure.com/doc/api/index.html
 
 var courseURL = "https://q.utoronto.ca/api/v1/courses/46670/"; // API URL to desired course
