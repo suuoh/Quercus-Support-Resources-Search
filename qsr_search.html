@@ -5,7 +5,7 @@
     // Tested on Firefox 56.0, Chrome 70.0, and Internet Explorer 11
     // Made by Melvin Chien, Academic and Collaborative Technologies, University of Toronto
     // Content from Quercus Support Resources, University of Toronto (https://q.utoronto.ca/courses/46670)
-    // February 7, 2019
+    // February 22, 2019
     // Lunr.js: https://lunrjs.com/docs/index.html
   -->
 
@@ -85,7 +85,7 @@
       .container {
         padding: 0.25rem;
         margin: auto;
-        width: 90%;
+        width: 95%;
       }
 
       .input-group {
@@ -606,7 +606,8 @@
         function showResults() {
           if (pagesFound && pagesFound.length > 0) {
             pagesFound.forEach(function(page) {
-              var newResult = "<div class='result-item'><h4><a href='" + page.url + "'>" + page.title + "</a></h4>";
+              var newResult = "<div class='result-item'><h4><a href='" + page.url + "' ";
+              newResult += "onclick='trackResultClicked(" + page.url + ", " + page.title + "); return false;'>" + page.title + "</a></h4>";
               newResult += "<p>" + page.body.substring(0, 150) + "...</p>";
               newResult += "</div>";
               resultsList.innerHTML += newResult;
@@ -618,10 +619,17 @@
 
         // trackResultClicked: Send Google Analytics PageView when search result link is clicked
         var trackResultClicked = function(url, title) {
-          gtag("config", "UA-129676263-1", {
-            "page_title": title,
-            "page_location": url
-          });
+          if (gtag) {
+            gtag("event", "page_view", {
+              "page_title": title,
+              "page_location": url,
+              "event_callback": function() {
+                document.location = url;
+              }
+            });
+          } else {
+            document.location = url;
+          }
         }
         
         // Build search index on page load

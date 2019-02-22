@@ -56,6 +56,12 @@ function getPageContent() {
   // Process Page content retrievals all at once and wait until finished before moving on
   $.when.apply(null, deferreds).done(function() {
     console.log("Content retrieved for " + deferreds.length + " pages");
+    
+    if (deferreds.length == pages.length && pages.length <= 100)
+      console.log("SUCCESS: Retrieved content for all published pages!");
+    else
+      console.log("WARNING: Error in retrieving content for published pages.");
+    
     exportFile();
   });
 }
