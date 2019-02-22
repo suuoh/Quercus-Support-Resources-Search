@@ -5,7 +5,7 @@
     // Tested on Firefox 56.0, Chrome 70.0, and Internet Explorer 11
     // Made by Melvin Chien, Academic and Collaborative Technologies, University of Toronto
     // Content from Quercus Support Resources, University of Toronto (https://q.utoronto.ca/courses/46670)
-    // February 7, 2019
+    // February 22, 2019
     // Lunr.js: https://lunrjs.com/docs/index.html
   -->
 
@@ -85,6 +85,7 @@
       .container {
         padding: 0.25rem;
         margin: auto;
+        width: 90%;
       }
 
       .input-group {
@@ -92,7 +93,6 @@
         flex-wrap: wrap;
         position: relative;
         align-items: stretch;
-        width: 100%;
       }
 
       .form-control {
@@ -161,7 +161,7 @@
   <body>
     <div class="container">
       <div class="input-group">
-        <input type="text" class="form-control" id="input-search" autofocus="autofocus" placeholder="What are you looking for?" aria-label="Search term" aria-describedby="button-search">
+        <input type="text" class="form-control" id="input-search" autofocus="autofocus" placeholder="What are you looking for? (Eg. course access, course life cycle, cross-listing, etc.)" aria-label="Search term" aria-describedby="button-search">
         <button class="btn btn-primary" type="button" id="button-search">Search</button>
       </div>
       <div id="results-list">
