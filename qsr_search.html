@@ -635,7 +635,7 @@
           if (pagesFound && pagesFound.length > 0) {
             pagesFound.forEach(function(page) {
               var newResult = "<div class='result-item'><h4><a href='" + page.url + "' ";
-              newResult += "onclick='trackResultClicked(\"" + page.url + "\", \"" + page.title + "\");'>" + page.title + "</a></h4>";
+              newResult += "onclick='trackResultClicked(\"" + page.url + "\", \"" + page.title + "\"); return false;'>" + page.title + "</a></h4>";
               newResult += "<p>" + page.body.substring(0, 150) + "...</p>";
               newResult += "</div>";
               resultsList.innerHTML += newResult;
@@ -663,11 +663,11 @@
             "page_title": title,
             "page_location": url,
             "event_callback": function() {
-              document.location = url;
+              window.top.location.href = url;
             }
           });
         } else {
-          document.location = url;
+          window.top.location.href = url;
         }
       }
 
