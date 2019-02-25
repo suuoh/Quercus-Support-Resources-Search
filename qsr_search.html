@@ -5,7 +5,7 @@
     // Tested on Firefox 56.0, Chrome 70.0, and Internet Explorer 11
     // Made by Melvin Chien, Academic and Collaborative Technologies, University of Toronto
     // Content from Quercus Support Resources, University of Toronto (https://q.utoronto.ca/courses/46670)
-    // February 22, 2019
+    // February 25, 2019
     // Lunr.js: https://lunrjs.com/docs/index.html
   -->
 
@@ -18,7 +18,9 @@
         dataLayer.push(arguments);
       }
       gtag('js', new Date());
-      gtag('config', 'UA-129676263-1');
+      gtag('config', 'UA-129676263-1', {
+        "send_page_view": false
+      });
 
     </script>
 
@@ -596,6 +598,8 @@
           //console.log(query);
           pagesFound = [];
           resultsList.innerHTML = "";
+          
+          var queryURI = "";
 
           // Track search query in Google Analytics
           gtag("config", "UA-129676263-1", {
@@ -629,7 +633,7 @@
           if (pagesFound && pagesFound.length > 0) {
             pagesFound.forEach(function(page) {
               var newResult = "<div class='result-item'><h4><a href='" + page.url + "' ";
-              newResult += "onclick='trackResultClicked(" + page.url + ", " + page.title + "); return false;'>" + page.title + "</a></h4>";
+              newResult += "onclick='trackResultClicked(\"" + page.url + "\", \"" + page.title + "\"); return false;'>" + page.title + "</a></h4>";
               newResult += "<p>" + page.body.substring(0, 150) + "...</p>";
               newResult += "</div>";
               resultsList.innerHTML += newResult;
@@ -638,25 +642,34 @@
             resultsList.innerHTML = "<div class='row'><div class='col'><h3>No results found</h3></div></div>";
           }
         }
-
-        // trackResultClicked: Send Google Analytics PageView when search result link is clicked
-        var trackResultClicked = function(url, title) {
-          if (gtag) {
-            gtag("event", "page_view", {
-              "page_title": title,
-              "page_location": url,
-              "event_callback": function() {
-                document.location = url;
-              }
-            });
-          } else {
-            document.location = url;
-          }
-        }
         
         // Build search index on page load
         buildIndex();
       });
+      
+      // Send manual PageView to fix duplicate URIs resulting from CDN
+      gtag("config", "UA-129676263-1", {
+        "page_title": "Quercus Support Resources Search",
+        "page_path": "/courses/46670/pages/search"
+      });
+      
+      // trackResultClicked: Send Google Analytics PageView when search result link is clicked
+      var trackResultClicked = function(url, title) {
+        console.log(url);
+        console.log(title);
+        if (gtag) {
+          console.log("gtag true");
+          gtag("event", "page_view", {
+            "page_title": title,
+            "page_location": url,
+            "event_callback": function() {
+              document.location = url;
+            }
+          });
+        } else {
+          document.location = url;
+        }
+      }
 
     </script>
   </body>
