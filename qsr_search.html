@@ -580,7 +580,6 @@
           // Perform search when Search button is clicked
           searchButton.addEventListener("click", function() {
             getResults(searchInput.value);
-            console.log(searchInput.value);
           });
 
           // Also perform search when Enter key is pressed
@@ -595,7 +594,6 @@
 
         // getResults: Retrieve results from index
         function getResults(query) {
-          //console.log(query);
           pagesFound = [];
           resultsList.innerHTML = "";
           
@@ -637,7 +635,7 @@
           if (pagesFound && pagesFound.length > 0) {
             pagesFound.forEach(function(page) {
               var newResult = "<div class='result-item'><h4><a href='" + page.url + "' ";
-              newResult += "onclick='trackResultClicked(\"" + page.url + "\", \"" + page.title + "\"); return false;'>" + page.title + "</a></h4>";
+              newResult += "onclick='trackResultClicked(\"" + page.url + "\", \"" + page.title + "\");'>" + page.title + "</a></h4>";
               newResult += "<p>" + page.body.substring(0, 150) + "...</p>";
               newResult += "</div>";
               resultsList.innerHTML += newResult;
@@ -657,12 +655,10 @@
         "page_path": "/courses/46670/pages/search"
       });
       
+      
       // trackResultClicked: Send Google Analytics PageView when search result link is clicked
       var trackResultClicked = function(url, title) {
-        console.log(url);
-        console.log(title);
         if (gtag) {
-          console.log("gtag true");
           gtag("event", "page_view", {
             "page_title": title,
             "page_location": url,
