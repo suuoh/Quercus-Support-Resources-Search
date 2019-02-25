@@ -599,12 +599,16 @@
           pagesFound = [];
           resultsList.innerHTML = "";
           
-          var queryURI = "";
+          // Build virtual URI for Google Analytics
+          var queryURI = "q=" + query.toLowerCase();
+          
+          if (checkboxStudents.checked)
+            queryURI += "&c=student";
 
-          // Track search query in Google Analytics
+          // Track search query in Google Analytics as a virtual Page View
           gtag("config", "UA-129676263-1", {
             "page_title": "Search Results",
-            "page_path": "/courses/46670/files/qsr_search.html?q=" + query
+            "page_path": "/courses/46670/files/qsr_search.html?" + queryURI
           });
           
           try {
