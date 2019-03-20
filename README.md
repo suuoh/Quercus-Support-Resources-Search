@@ -1,5 +1,6 @@
 # Quercus Support Resources Search
-Search functionality for a Canvas course, built using [lunr.js](https://lunrjs.com/docs/index.html)  
+Search functionality for a Canvas course with no backend databases or servers and minimal dependencies.  
+Built using [lunr.js](https://lunrjs.com/docs/index.html)  
 Tested on Firefox 56.0, Chrome 70.0, and Internet Explorer 11  
 
 
