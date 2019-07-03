@@ -38,9 +38,9 @@ None
 4. Verify that the ouput displays `"SUCCESS: ..."` and `qsr_search_pages.json` is automatically downloaded.
    ![Run Javascript](docs/2_run_javascript.png)
 5. Copy entire contents of `qsr_search_pages.json` and paste into `var pages` in `qsr_search.html`.
-   ![Paste JSON](docs/3_paste_JSON.png)
+   ![Paste JSON](docs/3_paste_json.png)
 6. Upload `qsr_search.html` into Canvas course.
-   ![Upload HTML](docs/4_upload_HTML.png)
+   ![Upload HTML](docs/4_upload_html.png)
 7. In a new or existing Canvas Page, insert the iframe code from `canvas_page_snippet.html`.
 8. Test the search functionality in the Canvas Page.
 
