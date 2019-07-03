@@ -6,7 +6,7 @@ Tested on Firefox 56.0, Chrome 70.0, and Internet Explorer 11.
 [Credits](#credits)  
 [Installation](#installation)  
   [Variables](#variables)  
-  [Set Up](#Set Up)  
+  [Setup](#Setup)  
 [Maintenance](#maintenance)  
 
 ## Credits
@@ -29,7 +29,7 @@ None
 #### qsr_page_iframe.html
 `iframe src` - Download link to the `qsr_search.html` file uploaded within the Canvas course. Can only be retrieved after the file has actually been uploaded to the Canvas course's Files.
 
-### Set Up
+### Setup
 *Make sure the variables above are updated and corrected before proceeding.*
 1. Copy entire contents of `qsr_search_getPages.js`.
    ![Copy Javascript](docs/1_copy_javascript.png)
