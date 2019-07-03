@@ -17,7 +17,7 @@ Uses the [Canvas API](https://canvas.instructure.com/doc/api/index.html) provide
 ## Installation
 ### Variables
 #### qsr_search_getPages.js
-`var courseURL` - Link to the [Canvas Courses API](https://canvas.instructure.com/doc/api/courses.html#method.courses.show) for a single course.
+`var courseURL` - Link to the [Canvas Courses API](https://canvas.instructure.com/doc/api/courses.html#method.courses.show) for a single course.  
 `link.download` - Name of the downloaded JSON file.
 
 #### qsr_search_pages.json
@@ -27,7 +27,7 @@ None
 `gtag` - Google Analytics Property ID. Used in 4 separate instances.
 
 #### qsr_page_iframe.html
-`iframe src` - Download link to the `qsr_search.html` file uploaded within the Canvas course. Can only be retrieved after the file has actually been uploaded to the Canvas course's Files.
+`iframe src` - Download link to the `qsr_search.html` file uploaded within the Canvas course. *Can only be retrieved after the file has actually been uploaded to the Canvas course's Files.*
 
 ### Setup
 *Make sure the variables above are updated and corrected before proceeding.*
@@ -45,5 +45,5 @@ None
 8. Test the search functionality in the Canvas Page.
 
 ## Maintenance
-As this is developed without a backend and user authentication, the search index data must be manually updated as needed. 
+As this tool does not have a backend, the search index data must be manually updated as needed.  
 See [Update QSR Search.docx](docs/Update%20QSR%20Search.docx) or watch a [video tutorial](https://youtu.be/CoIv780_sls) for more info.
