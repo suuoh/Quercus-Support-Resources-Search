@@ -6,7 +6,7 @@ Tested on Firefox 56.0, Chrome 70.0, and Internet Explorer 11.
 - [Credits](#credits)  
 - [Installation](#installation)  
     - [Variables](#variables)  
-   - [Setup](#setup)  
+    - [Setup](#setup)  
 - [Maintenance](#maintenance)  
 
 ## Credits
