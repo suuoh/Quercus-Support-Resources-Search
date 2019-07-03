@@ -3,11 +3,11 @@ Search functionality for a Canvas course with no backend databases or servers an
 Tested on Firefox 56.0, Chrome 70.0, and Internet Explorer 11.  
 
 ## Table of Contents
-[Credits](#credits)  
-[Installation](#installation)  
-  [Variables](#variables)  
-  [Setup](#Setup)  
-[Maintenance](#maintenance)  
+- [Credits](#credits)  
+- [Installation](#installation)  
+    - [Variables](#variables)  
+   - [Setup](#setup)  
+- [Maintenance](#maintenance)  
 
 ## Credits
 Built using [lunr.js](https://lunrjs.com/docs/index.html).  
