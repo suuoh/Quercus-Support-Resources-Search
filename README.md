@@ -41,7 +41,7 @@ None
    ![Paste JSON](docs/3_paste_json.png)
 6. Upload `qsr_search.html` into Canvas course.
    ![Upload HTML](docs/4_upload_html.png)
-7. In a new or existing Canvas Page, insert the iframe code from `canvas_page_snippet.html`.
+7. In a new or existing Canvas Page, insert the iframe code from `qsr_page_iframe.html`.
 8. Test the search functionality in the Canvas Page.
 
 ## Maintenance
