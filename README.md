@@ -1,5 +1,5 @@
 # Quercus Support Resources Search
-Search functionality for a Canvas course with no backend databases or servers and minimal dependencies.
+Search functionality for a Canvas course with no backend databases or servers and minimal dependencies.  
 Tested on Chrome 83.0.
 
 ## Table of Contents
