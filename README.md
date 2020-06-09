@@ -13,7 +13,7 @@ Tested on Chrome 83.0.
 Built using [lunr.js](https://lunrjs.com/docs/index.html).  
 Content from [Quercus Support Resources, University of Toronto](https://q.utoronto.ca/courses/46670).  
 Uses the [Canvas API](https://canvas.instructure.com/doc/api/index.html) provided by Instructure.  
-Most up to date source code on [GitHub](https://github.com/suuoh/Quercus-Support-Resources-Search).  
+Up to date source code on [GitHub](https://github.com/suuoh/Quercus-Support-Resources-Search).  
 
 ## Installation
 ### Variables
